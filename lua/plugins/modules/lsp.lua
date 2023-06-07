@@ -28,13 +28,7 @@ return {
 
       lsp.ensure_installed({
         'tsserver',
-        'eslint',
-        'rust_analyzer',
-        'gopls',
-        'lua_ls',
-        'jsonls',
-        'bashls',
-        'vimls'
+        -- 'eslint',
       })
 
       lsp.on_attach(function(_, bufnr)
