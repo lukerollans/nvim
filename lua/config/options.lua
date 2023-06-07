@@ -12,8 +12,11 @@ local options = {
   timeoutlen = 300, -- decrease update time
   completeopt = 'menuone,noselect', -- better completeopt experience
   termguicolors = true, -- use gui colours where possible
+  guicursor = 'i:block', -- always use block cursor
+  cursorline = true, -- highlight the current line
+  wordwrap = false,
 }
 
-for key, value of options do
-  vim.o[key] = value
+for key, value in pairs(options) do
+  vim.opt[key] = value
 end
