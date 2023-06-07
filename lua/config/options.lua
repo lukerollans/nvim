@@ -14,7 +14,7 @@ local options = {
   termguicolors = true, -- use gui colours where possible
   guicursor = 'i:block', -- always use block cursor
   cursorline = true, -- highlight the current line
-  wordwrap = false,
+  wrap = true, -- line wrap sucks
 }
 
 for key, value in pairs(options) do
