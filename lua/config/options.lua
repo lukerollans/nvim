@@ -1,5 +1,5 @@
 local options = {
-  hlsearch = true, -- use highlighting on search
+  hlsearch = false, -- dont use highlighting on search
   number = true, -- always show line numbers
   clipboard = 'unnamedplus', -- sync clipboard between neovim and macOS
   breakindent = true, -- enable break indent
@@ -14,7 +14,11 @@ local options = {
   termguicolors = true, -- use gui colours where possible
   guicursor = 'i:block', -- always use block cursor
   cursorline = true, -- highlight the current line
-  wrap = true, -- line wrap sucks
+  wrap = false, -- line wrap sucks
+  splitbelow = true, -- open horizontal splits in their natural direction,
+  splitright = true, -- open vertical splits in their natural direction,
+  relativenumber = true, -- relative numbers in gutter
+  textwidth = 80, -- make it obvious where 80 cols is
 }
 
 for key, value in pairs(options) do

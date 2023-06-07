@@ -25,6 +25,12 @@ return {
           select_strategy = "reset",
           sorting_strategy = "ascending",
           layout_strategy = "horizontal",
+          mappings = {
+            i = {
+              ["<C-j>"] = "move_selection_next",
+              ["<C-k>"] = "move_selection_previous",
+            }
+          }
           -- layout_config = {
           --   width = 0.5,
           --   height = 0.4,

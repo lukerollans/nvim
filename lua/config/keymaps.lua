@@ -4,6 +4,9 @@ local map = vim.keymap.set
 -- better default experience
 map({ 'n', 'v' }, '<Space>', '<Nop>', { silent = true })
 
+-- switch between last two files
+map('n', '<leader><leader>', '<c-^>')
+
 -- telescope keymaps
 map('n', '<C-p>', require('telescope.builtin').git_files, { desc = 'Search [G]it [F]iles' })
 map('n', '<C-[>', require('telescope.builtin').live_grep, { desc = '[S]earch by [G]rep' })
