@@ -21,9 +21,9 @@ return {
           replace = { a = { fg = colors.fg, bg = colors.bg }, b = { fg = colors.fg, bg = colors.bg } },
 
           inactive = {
-            a = { bg = colors.fg, fg = colors.bg },
-            b = { bg = colors.fg, fg = colors.bg },
-            c = { bg = colors.fg, fg = colors.bg },
+            a = { bg = colors.bg, fg = colors.fg },
+            b = { bg = colors.bg, fg = colors.fg },
+            c = { bg = colors.bg, fg = colors.fg },
           },
         },
         icons_enabled = true,
@@ -53,13 +53,13 @@ return {
         lualine_a = {},
         lualine_b = { "branch" },
         lualine_c = {
-          -- "filename",
           {
             "filetype",
             icon_only = true,
             separator = "",
             padding = {
-              left = 1, right = 0 }
+              left = 1, right = 0
+            }
           },
           {
             "filename",
@@ -83,7 +83,12 @@ return {
       inactive_sections = {
         lualine_a = {},
         lualine_b = {},
-        lualine_c = { "filename" },
+        lualine_c = {
+          {
+            "filename",
+            path = 0,
+          }
+        },
         lualine_x = { "location" },
         lualine_y = {},
         lualine_z = {},
