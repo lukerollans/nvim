@@ -14,6 +14,10 @@ map('n', '<leader>F', ':FormatWrite<CR>')
 -- use 'Enter' in normal mode to replace current word
 map('n', '<Enter>', 'ciw')
 
+-- bufferline (tab bar) navigation
+map('n', 'gt', ':BufferLineCycleNext<CR>')
+map('n', 'gr', ':BufferLineCyclePrev<CR>')
+
 -- telescope keymaps
 map('n', '<C-p>', require('telescope.builtin').git_files, { desc = 'Search [G]it [F]iles' })
 map('n', '<C-[>', require('telescope.builtin').live_grep, { desc = '[S]earch by [G]rep' })
