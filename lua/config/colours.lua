@@ -1,10 +1,11 @@
 local M = {}
 
-local colors = {
+local colours = {
   fg = "#76787d",
   bg = "#252829",
 }
 
-M.colors = colors
+M.colours = colours
+M.colors = colours
 
 return M
