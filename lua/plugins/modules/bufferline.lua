@@ -2,7 +2,6 @@ local colours = require("config.colours").colours
 
 return {
   "akinsho/bufferline.nvim",
-  event = "VeryLazy",
   version = "*",
   dependencies = "nvim-tree/nvim-web-devicons",
   config = function()
@@ -11,7 +10,7 @@ return {
         indicator = {
           icon = " ",
         },
-        always_show_bufferline = false,
+        always_show_bufferline = true,
         show_close_icon = false,
         tab_size = 0,
         max_name_length = 25,
