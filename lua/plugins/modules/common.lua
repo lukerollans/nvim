@@ -4,6 +4,7 @@ return {
   'tpope/vim-rhubarb',
   'tpope/vim-fugitive',
   'tpope/vim-sleuth',
+  'tpope/vim-surround',
   'folke/which-key.nvim',
   {
     'windwp/nvim-autopairs',
