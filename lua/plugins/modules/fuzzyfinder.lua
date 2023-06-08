@@ -42,7 +42,7 @@ return {
           find_files = {
             previewer = false,
             layout_config = {
-              width = 0.7,
+              width = 0.8,
               height = 0.4,
               prompt_position = "top",
               preview_cutoff = 120,
@@ -51,7 +51,7 @@ return {
           git_files = {
             previewer = false,
             layout_config = {
-              width = 0.7,
+              width = 0.8,
               height = 0.4,
               prompt_position = "top",
               preview_cutoff = 120,
