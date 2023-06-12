@@ -1,8 +1,16 @@
 local lspconfig = require('lspconfig')
+local map = vim.keymap.set
 
 -- install/setup each server below
+
+-- typescript
 lspconfig.tsserver.setup {}
-lspconfig.elixirls.setup {}
+
+-- elixir
+lspconfig.elixirls.setup {
+  cmd = { '/opt/elixir-ls/language_server.sh' },
+  filetypes = { 'elixir', 'eelixir', 'exs' },
+}
 
 -- mappings, regardless of language
 vim.keymap.set('n', '<leader>e', vim.diagnostic.open_float)
@@ -21,20 +29,20 @@ vim.api.nvim_create_autocmd('LspAttach', {
     -- Buffer local mappings.
     -- See `:help vim.lsp.*` for documentation on any of the below functions
     local opts = { buffer = ev.buf }
-    vim.keymap.set('n', 'gD', vim.lsp.buf.declaration, opts)
-    vim.keymap.set('n', 'gd', vim.lsp.buf.definition, opts)
-    vim.keymap.set('n', 'K', vim.lsp.buf.hover, opts)
-    vim.keymap.set('n', 'gi', vim.lsp.buf.implementation, opts)
-    vim.keymap.set('n', '<space>wa', vim.lsp.buf.add_workspace_folder, opts)
-    vim.keymap.set('n', '<space>wr', vim.lsp.buf.remove_workspace_folder, opts)
-    vim.keymap.set('n', '<space>wl', function()
+    map('n', 'gD', vim.lsp.buf.declaration, opts)
+    map('n', 'gd', vim.lsp.buf.definition, opts)
+    map('n', 'K', vim.lsp.buf.hover, opts)
+    map('n', 'gi', vim.lsp.buf.implementation, opts)
+    map('n', '<leader>wa', vim.lsp.buf.add_workspace_folder, opts)
+    map('n', '<leader>wr', vim.lsp.buf.remove_workspace_folder, opts)
+    map('n', '<leader>wl', function()
       print(vim.inspect(vim.lsp.buf.list_workspace_folders()))
     end, opts)
-    vim.keymap.set('n', '<space>D', vim.lsp.buf.type_definition, opts)
-    vim.keymap.set('n', '<space>rn', vim.lsp.buf.rename, opts)
-    vim.keymap.set({ 'n', 'v' }, '<space>ca', vim.lsp.buf.code_action, opts)
-    vim.keymap.set('n', 'gr', vim.lsp.buf.references, opts)
-    vim.keymap.set('n', '<space>f', function()
+    map('n', '<leader>D', vim.lsp.buf.type_definition, opts)
+    map('n', '<leader>rn', vim.lsp.buf.rename, opts)
+    map({ 'n', 'v' }, '<leader>ca', vim.lsp.buf.code_action, opts)
+    map('n', 'gr', vim.lsp.buf.references, opts)
+    map('n', '<leader>f', function()
       vim.lsp.buf.format { async = true }
     end, opts)
   end,

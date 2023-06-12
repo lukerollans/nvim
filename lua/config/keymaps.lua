@@ -8,7 +8,7 @@ map({ 'n', 'v' }, '<Space>', '<Nop>', { silent = true })
 map('n', '<leader><leader>', '<c-^>')
 
 -- format the current buffer
-map('n', '<leader>f', ':Format<CR>')
+map('n', '<leader>gf', ':Format<CR>')
 map('n', '<leader>F', ':FormatWrite<CR>')
 
 -- use 'Enter' in normal mode to replace current word
