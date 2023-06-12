@@ -14,6 +14,9 @@ map('n', '<leader>F', ':FormatWrite<CR>')
 -- use 'Enter' in normal mode to replace current word
 map('n', '<Enter>', 'ciw')
 
+-- lazygit
+map('n', '<leader>lg', ':LazyGit<CR>')
+
 -- bufferline (tab bar) navigation
 map('n', 'gt', ':BufferLineCycleNext<CR>')
 map('n', 'gr', ':BufferLineCyclePrev<CR>')
