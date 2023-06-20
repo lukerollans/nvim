@@ -19,8 +19,8 @@ return {
       { 'hrsh7th/cmp-nvim-lsp' },
       { 'L3MON4D3/LuaSnip' },
 
-      { 'onsails/lspkind.nvim' },
-      { 'b0o/schemastore.nvim' }
+      { 'onsails/lspkind.nvim' }, -- pictograms in autocompletion menu
+      { 'b0o/schemastore.nvim' } -- json and yaml schema stores
     },
     config = function()
       local lsp = require('lsp-zero').preset('recommended')
@@ -29,6 +29,7 @@ return {
         'tsserver',
         'eslint',
         'jsonls',
+        'yamlls',
         'bashls',
         'vimls',
         'elixirls',
@@ -113,7 +114,20 @@ return {
       lspconfig.jsonls.setup({
         settings = {
           json = {
-            schema = require('schemastore').json.schemas(),
+            schemas = require('schemastore').json.schemas(),
+            validate = { enable = true },
+          }
+        }
+      })
+
+      -- configure yaml specific settings
+      lspconfig.yamlls.setup({
+        settings = {
+          yaml = {
+            schemaStore = {
+              enable = false
+            },
+            schemas = require('schemastore').yaml.schemas(),
             validate = { enable = true },
           }
         }
@@ -169,7 +183,7 @@ return {
             dialyzerEnabled = false,
             enableTestLenses = false,
           },
-          on_attach = function(client, bufnr)
+          on_attach = function()
             vim.keymap.set("n", "<space>fp", ":ElixirFromPipe<cr>", { buffer = true, noremap = true })
             vim.keymap.set("n", "<space>tp", ":ElixirToPipe<cr>", { buffer = true, noremap = true })
             vim.keymap.set("v", "<space>em", ":ElixirExpandMacro<cr>", { buffer = true, noremap = true })
