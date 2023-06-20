@@ -3,28 +3,27 @@ return {
   {
     'VonHeikemen/lsp-zero.nvim',
     branch = 'v2.x',
-    lazy = true, dependencies = {
+    lazy = false, dependencies = {
       -- LSP Support
-      { 'neovim/nvim-lspconfig' }, -- Required
+      { 'neovim/nvim-lspconfig' },
       {
-        -- Optional
         'williamboman/mason.nvim',
         build = function()
           pcall(vim.cmd, 'MasonUpdate')
         end,
       },
-      { 'williamboman/mason-lspconfig.nvim' }, -- Optional
+      { 'williamboman/mason-lspconfig.nvim' },
 
       -- Autocompletion
-      { 'hrsh7th/nvim-cmp' },     -- Required
-      { 'hrsh7th/cmp-nvim-lsp' }, -- Required
-      { 'L3MON4D3/LuaSnip' },     -- Required
+      { 'hrsh7th/nvim-cmp' },
+      { 'hrsh7th/cmp-nvim-lsp' },
+      { 'L3MON4D3/LuaSnip' },
 
       { 'onsails/lspkind.nvim' },
       { 'b0o/schemastore.nvim' }
     },
     config = function()
-      local lsp = require('lsp-zero').preset("recommended")
+      local lsp = require('lsp-zero').preset('recommended')
 
       lsp.ensure_installed({
         'tsserver',
@@ -52,8 +51,9 @@ return {
           timeout_ms = 10000,
         },
         servers = {
-          ['tsserver'] = { 'javascript', 'typescript', 'jsx', 'tsx' },
+          ['tsserver'] = { 'javascript', 'typescript', 'javascriptreact', 'typescriptreact' },
           ['elixirls'] = { 'elixir', 'eex' },
+          ['jsonls'] = { 'json' },
           -- ['lua_ls'] = { 'lua' },
           -- ['rust_analyzer'] = { 'rust' },
           -- ['gopls'] = { 'go' },
@@ -121,7 +121,7 @@ return {
 
       -- configure eslint specific settings
       require('lspconfig').eslint.setup({
-        filestypes = { 'javascript', 'javascriptreact', 'typescript', 'typescriptreact', 'vue', 'svelte' },
+        filetypes = { 'javascript', 'javascriptreact', 'typescript', 'typescriptreact', 'vue', 'svelte' },
         settings = {
           workingDirectory = { mode = 'auto' },
           format = { enable = true },
@@ -153,7 +153,7 @@ return {
   -- elixir-tools
   {
     "elixir-tools/elixir-tools.nvim",
-    lazy = false,
+    lazy = true,
     enabled = true,
     event = { "BufReadPre", "BufNewFile" },
     dependencies = { "nvim-lua/plenary.nvim" },
