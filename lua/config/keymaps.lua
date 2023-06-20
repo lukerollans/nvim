@@ -7,7 +7,7 @@ map({ 'n', 'v' }, '<Space>', '<Nop>', { silent = true })
 -- switch between last two files
 map('n', '<leader><leader>', '<c-^>')
 
--- format the current buffer
+-- format the current buffer (not with LSP)
 map('n', '<leader>gf', ':Format<CR>')
 map('n', '<leader>F', ':FormatWrite<CR>')
 

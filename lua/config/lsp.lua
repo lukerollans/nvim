@@ -13,10 +13,10 @@ lspconfig.elixirls.setup {
 }
 
 -- mappings, regardless of language
-vim.keymap.set('n', '<leader>e', vim.diagnostic.open_float)
-vim.keymap.set('n', '[d', vim.diagnostic.goto_prev)
-vim.keymap.set('n', ']d', vim.diagnostic.goto_next)
-vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist)
+map('n', '<leader>e', vim.diagnostic.open_float)
+map('n', '[d', vim.diagnostic.goto_prev)
+map('n', ']d', vim.diagnostic.goto_next)
+map('n', '<leader>q', vim.diagnostic.setloclist)
 
 -- Use LspAttach autocommand to only map the following keys
 -- after the language server attaches to the current buffer
@@ -43,7 +43,7 @@ vim.api.nvim_create_autocmd('LspAttach', {
     map({ 'n', 'v' }, '<leader>ca', vim.lsp.buf.code_action, opts)
     map('n', 'gr', vim.lsp.buf.references, opts)
     map('n', '<leader>f', function()
-      vim.lsp.buf.format { async = true }
+      vim.lsp.buf.format { async = false }
     end, opts)
   end,
 })

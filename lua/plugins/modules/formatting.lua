@@ -18,10 +18,11 @@ return {
     },
   },
   {
+    -- TODO: move this to eslint language server and diagnostics
     'mhartington/formatter.nvim', -- apply formatting to certain file types
     config = function()
       require('formatter').setup {
-        logging = true,
+        logging = false,
         filetype = {
           typescriptreact = { prettier },
           typescript = { prettier },
