@@ -74,7 +74,7 @@ return {
 
       -- define how diagnostics manifest
       vim.diagnostic.config({
-        underline = true,
+        underline = false,
         virtual_text = false,
         signs = true,
         update_in_insert = false,
