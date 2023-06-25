@@ -19,6 +19,9 @@ local options = {
   splitright = true, -- open vertical splits in their natural direction,
   relativenumber = true, -- relative numbers in gutter
   textwidth = 80, -- make it obvious where 80 cols is
+  tabstop = 2, -- spaces not tabs
+  shiftwidth = 2, -- spaces not tabs
+  expandtab = true, -- spaces not tabs
 }
 
 for key, value in pairs(options) do

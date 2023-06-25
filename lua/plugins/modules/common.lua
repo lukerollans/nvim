@@ -6,4 +6,5 @@ return {
   'tpope/vim-sleuth',
   'tpope/vim-surround',
   'folke/which-key.nvim',
+  'mattn/emmet-vim',
 }
