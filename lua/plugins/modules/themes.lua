@@ -113,6 +113,7 @@ return {
         end,
       })
 
+      -- activate catppuccin as the default colorscheme
       vim.api.nvim_command("colorscheme catppuccin")
     end,
   },

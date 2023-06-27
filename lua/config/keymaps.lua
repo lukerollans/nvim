@@ -11,15 +11,13 @@ map('n', '<leader><leader>', '<c-^>')
 map('n', '<leader>gf', ':Format<CR>')
 map('n', '<leader>F', ':FormatWrite<CR>')
 
--- use 'Enter' in normal mode to replace current word
-map('n', '<Enter>', 'ciw')
-
 -- lazygit
 map('n', '<leader>lg', ':LazyGit<CR>')
 
 -- bufferline (tab bar) navigation
 map('n', 'gt', ':BufferLineCycleNext<CR>')
 map('n', 'gr', ':BufferLineCyclePrev<CR>')
+map('n', 'gb', ':BufferLinePick<CR>')
 
 -- telescope keymaps
 map('n', '<C-p>', require('telescope.builtin').git_files, { desc = 'Search [G]it [F]iles' })

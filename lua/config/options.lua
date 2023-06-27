@@ -22,6 +22,7 @@ local options = {
   tabstop = 2, -- spaces not tabs
   shiftwidth = 2, -- spaces not tabs
   expandtab = true, -- spaces not tabs
+  background = 'dark', -- apply dark background theming
 }
 
 for key, value in pairs(options) do
