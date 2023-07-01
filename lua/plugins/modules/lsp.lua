@@ -135,11 +135,19 @@ return {
 
       -- configure eslint specific settings
       require('lspconfig').eslint.setup({
-        filetypes = { 'javascript', 'javascriptreact', 'typescript', 'typescriptreact', 'vue', 'svelte' },
+        on_attach = function(client, bufnr)
+          -- automatically resolve all fixable eslint
+          -- issues when the buffer saves
+          vim.api.nvim_create_autocmd("BufWritePre", {
+            buffer = bufnr,
+            command = "EslintFixAll",
+          })
+        end,
         settings = {
-          workingDirectory = { mode = 'auto' },
-          format = { enable = true },
-          lint = { enable = true },
+          format = true,
+          workingDirectory = {
+            mode = 'location' 
+          },
         },
       })
 
