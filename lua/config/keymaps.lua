@@ -8,7 +8,7 @@ map({ 'n', 'v' }, '<Space>', '<Nop>', { silent = true })
 map('n', '<leader><leader>', '<c-^>')
 
 -- lazygit
-map('n', '<leader>g', ':LazyGit<CR>')
+map('n', '<leader>lg', ':LazyGit<CR>')
 
 -- format the current buffer (hopefully temporary)
 map('n', '<leader>gf', ':lua vim.lsp.buf.format()<CR>')
