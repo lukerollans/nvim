@@ -10,6 +10,9 @@ map('n', '<leader><leader>', '<c-^>')
 -- lazygit
 map('n', '<leader>g', ':LazyGit<CR>')
 
+-- format the current buffer (hopefully temporary)
+map('n', '<leader>gf', ':lua vim.lsp.buf.format()<CR>')
+
 -- bufferline (tab bar) navigation
 map('n', 'gt', ':BufferLineCycleNext<CR>')
 map('n', 'gr', ':BufferLineCyclePrev<CR>')
