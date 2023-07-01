@@ -7,12 +7,8 @@ map({ 'n', 'v' }, '<Space>', '<Nop>', { silent = true })
 -- switch between last two files
 map('n', '<leader><leader>', '<c-^>')
 
--- format the current buffer (not with LSP)
-map('n', '<leader>gf', ':Format<CR>')
-map('n', '<leader>F', ':FormatWrite<CR>')
-
 -- lazygit
-map('n', '<leader>lg', ':LazyGit<CR>')
+map('n', '<leader>g', ':LazyGit<CR>')
 
 -- bufferline (tab bar) navigation
 map('n', 'gt', ':BufferLineCycleNext<CR>')
@@ -27,7 +23,7 @@ map('n', '<leader>sh', require('telescope.builtin').help_tags, { desc = '[S]earc
 map('n', '<leader>sw', require('telescope.builtin').grep_string, { desc = '[S]earch current [W]ord' })
 map('n', '<leader>sd', require('telescope.builtin').diagnostics, { desc = '[S]earch [D]iagnostics' })
 
--- diagnostic keymaps
+-- diagnostics keymaps
 map('n', '[d', vim.diagnostic.goto_prev, { desc = 'Go to previous diagnostic message' })
 map('n', ']d', vim.diagnostic.goto_next, { desc = 'Go to next diagnostic message' })
 map('n', '<leader>e', vim.diagnostic.open_float, { desc = 'Open floating diagnostic message' })
