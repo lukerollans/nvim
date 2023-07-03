@@ -33,6 +33,7 @@ return {
         'bashls',
         'vimls',
         'elixirls',
+        'prismals',
         -- 'rust_analyzer',
         -- 'gopls',
         -- 'lua_ls',
@@ -55,6 +56,7 @@ return {
           ['tsserver'] = { 'javascript', 'typescript', 'javascriptreact', 'typescriptreact' },
           ['elixirls'] = { 'elixir', 'eex' },
           ['jsonls'] = { 'json' },
+          ['prismals'] = { 'prisma' },
           -- ['lua_ls'] = { 'lua' },
           -- ['rust_analyzer'] = { 'rust' },
           -- ['gopls'] = { 'go' },
@@ -150,6 +152,9 @@ return {
           },
         },
       })
+
+      -- Prisma ORM specific settings
+      lspconfig.prismals.setup {}
 
       -- all configured, start 'er up
       lsp.setup()
