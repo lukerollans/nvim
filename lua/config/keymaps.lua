@@ -26,6 +26,14 @@ map('n', '<leader>sh', require('telescope.builtin').help_tags, { desc = '[S]earc
 map('n', '<leader>sw', require('telescope.builtin').grep_string, { desc = '[S]earch current [W]ord' })
 map('n', '<leader>sd', require('telescope.builtin').diagnostics, { desc = '[S]earch [D]iagnostics' })
 
+-- telescope fuzzy find in current buffer
+map('n', '<leader>/', function()
+  local themes = require('telescope.themes')
+  require('telescope.builtin').current_buffer_fuzzy_find(themes.get_dropdown {
+    previewer = false,
+  })
+end)
+
 -- diagnostics keymaps
 map('n', '[d', vim.diagnostic.goto_prev, { desc = 'Go to previous diagnostic message' })
 map('n', ']d', vim.diagnostic.goto_next, { desc = 'Go to next diagnostic message' })
