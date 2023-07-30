@@ -1,5 +1,15 @@
 local api = vim.api
 
+-- automatically create parent directories when writing buffers or files
+vim.api.nvim_create_autocmd({ "BufWritePre", "FileWritePre" }, {
+  pattern = "*",
+  group = api.nvim_create_augroup("auto_create_dir", { clear = true }),
+  callback = function(ctx)
+    local dir = vim.fn.fnamemodify(ctx.file, ":p:h")
+    vim.fn.mkdir(dir, "p")
+  end
+})
+
 -- don't auto comment new line when entering comments
 api.nvim_create_autocmd("BufEnter", { command = [[set formatoptions-=cro]] })
 
