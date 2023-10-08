@@ -3,9 +3,11 @@
 return {
   {
     'lukas-reineke/indent-blankline.nvim', -- show indentation guides on blank lines
+    main = 'ibl',
     opts = {
-      char = '┊',
-      show_trailing_blankline_indent = false,
+      indent = {
+        char = '┊',
+      },
     },
   },
 }
