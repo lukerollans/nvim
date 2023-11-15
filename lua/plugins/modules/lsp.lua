@@ -34,6 +34,7 @@ return {
         'vimls',
         'elixirls',
         'prismals',
+        'terraformls',
         -- 'rust_analyzer',
         -- 'gopls',
         -- 'lua_ls',
