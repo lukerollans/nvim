@@ -10,6 +10,10 @@ return {
           light = "latte",
           dark = "mocha",
         },
+        integrations = {
+          treesitter = true,
+          gitsigns = true,
+        },
         color_overrides = {
           mocha = {
             rosewater = "#EA6962",
