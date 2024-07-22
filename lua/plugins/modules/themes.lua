@@ -13,6 +13,8 @@ return {
         integrations = {
           treesitter = true,
           gitsigns = true,
+          neotree = true,
+          cmp = true,
         },
         color_overrides = {
           mocha = {
