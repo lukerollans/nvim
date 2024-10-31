@@ -24,7 +24,6 @@ local options = {
   shiftwidth = 2, -- spaces not tabs
   expandtab = true, -- spaces not tabs
   background = 'dark', -- apply dark background theming
-  showmode = false, -- we show mode in statusline, turn off the default duplicate
 }
 
 for key, value in pairs(options) do
