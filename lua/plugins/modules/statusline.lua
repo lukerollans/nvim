@@ -51,9 +51,14 @@ return {
       },
       sections = {
         lualine_a = {
-          "mode"
+          {
+            "mode",
+            padding = 1
+          }
         },
-        lualine_b = { "branch" },
+        lualine_b = {
+          "branch"
+        },
         lualine_c = {
           {
             "filetype",
