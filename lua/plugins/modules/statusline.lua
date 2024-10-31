@@ -55,16 +55,15 @@ return {
           "mode"
         },
         lualine_b = {
-          "branch"
+          {
+            "branch",
+            color = colors.macchiato.yellow
+          }
         },
         lualine_c = {
           {
             "filename",
             path = 1,
-            padding = {
-              left = 0,
-              right = 1
-            },
             symbols = {
               modified = "",
               readonly = "",

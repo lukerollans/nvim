@@ -6,7 +6,8 @@ local colours = {
   macchiato = {
     pink = { fg = "#590d44", bg = "#f5bde6" },
     blue = { fg = "#8aadf4", bg = "#2b364d" },
-    peach = { fg = "#4d3528", bg = "#f5a97f" }
+    peach = { fg = "#4d3528", bg = "#f5a97f" },
+    yellow = { bg = "#4D4433", fg = "#EED49F" }
   }
 }
 
