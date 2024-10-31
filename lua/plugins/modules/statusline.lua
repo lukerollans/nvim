@@ -8,22 +8,36 @@ return {
     local colors = require('config.colours').colors
     require("lualine").setup {
       options = {
-        -- theme = "auto", --"gruvbox-material",
         theme = {
           normal = {
-            a = { fg = colors.fg, bg = colors.bg },
+            a = { fg = colors.bg, bg = colors.fg },
             b = { fg = colors.fg, bg = colors.bg },
             c = { fg = colors.fg, bg = colors.bg },
+            z = { fg = colors.fg, bg = colors.bg }
           },
-          insert = { a = { fg = colors.fg, bg = colors.bg }, b = { fg = colors.fg, bg = colors.bg } },
-          visual = { a = { fg = colors.fg, bg = colors.bg }, b = { fg = colors.fg, bg = colors.bg } },
-          command = { a = { fg = colors.fg, bg = colors.bg }, b = { fg = colors.fg, bg = colors.bg } },
-          replace = { a = { fg = colors.fg, bg = colors.bg }, b = { fg = colors.fg, bg = colors.bg } },
-
+          insert = {
+            a = colors.macchiato.pink,
+            b = { fg = colors.fg, bg = colors.bg },
+            z = { fg = colors.fg, bg = colors.bg }
+          },
+          visual = {
+            a = colors.macchiato.peach,
+            b = { fg = colors.fg, bg = colors.bg },
+            z = { fg = colors.fg, bg = colors.bg }
+          },
+          command = {
+            a = colors.macchiato.blue,
+            b = { fg = colors.fg, bg = colors.bg },
+            z = { fg = colors.fg, bg = colors.bg }
+          },
+          replace = {
+            a = { fg = colors.fg, bg = colors.bg },
+            b = { fg = colors.fg, bg = colors.bg }
+          },
           inactive = {
             a = { bg = colors.bg, fg = colors.fg },
             b = { bg = colors.bg, fg = colors.fg },
-            c = { bg = colors.bg, fg = colors.fg },
+            c = { bg = colors.bg, fg = colors.fg }
           },
         },
         icons_enabled = true,
@@ -50,7 +64,9 @@ return {
         },
       },
       sections = {
-        lualine_a = {},
+        lualine_a = {
+          "mode"
+        },
         lualine_b = { "branch" },
         lualine_c = {
           {
@@ -73,12 +89,7 @@ return {
           { "diagnostics", sources = { "nvim_lsp" }, symbols = { error = " ", warn = " ", info = " " } },
         },
         lualine_x = { "encoding" },
-        lualine_y = { "progress" },
-        lualine_z = {
-          function()
-            return " " .. os.date("%R")
-          end,
-        },
+        lualine_y = { "progress" }
       },
       inactive_sections = {
         lualine_a = {},
@@ -90,8 +101,7 @@ return {
           }
         },
         lualine_x = { "location" },
-        lualine_y = {},
-        lualine_z = {},
+        lualine_y = {}
       },
       tabline = {},
       extensions = { "neo-tree", "lazy" },
