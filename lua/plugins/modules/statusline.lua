@@ -19,6 +19,7 @@ return {
           insert = {
             a = colors.macchiato.pink,
             b = { fg = colors.fg, bg = colors.bg },
+            c = { fg = colors.fg, bg = colors.bg },
             z = { fg = colors.fg, bg = colors.bg }
           },
           visual = {
@@ -58,20 +59,25 @@ return {
         },
         lualine_c = {
           {
-            "filetype",
-            icon_only = true,
-            separator = "",
-            padding = {
-              left = 0, right = 0
-            }
-          },
-          {
             "filename",
             path = 1,
+            padding = {
+              left = 0,
+              right = 1
+            },
             symbols = {
               modified = "",
               readonly = "",
               unnamed = ""
+            }
+          },
+          {
+            "filetype",
+            icon_only = true,
+            separator = "",
+            padding = {
+              left = 0,
+              right = 0
             }
           },
           { "diagnostics", sources = { "nvim_lsp" }, symbols = { error = " ", warn = " ", info = " " } },
