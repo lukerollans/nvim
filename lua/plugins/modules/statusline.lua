@@ -51,10 +51,7 @@ return {
       },
       sections = {
         lualine_a = {
-          {
-            "mode",
-            padding = 1
-          }
+          "mode"
         },
         lualine_b = {
           "branch"
