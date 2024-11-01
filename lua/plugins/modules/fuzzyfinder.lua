@@ -24,7 +24,6 @@ return {
           initial_mode = "insert",
           select_strategy = "reset",
           sorting_strategy = "ascending",
-          layout_strategy = "horizontal",
           mappings = {
             i = {
               ["<C-j>"] = "move_selection_next",
@@ -32,7 +31,11 @@ return {
             }
           }
         },
-        pickers = {},
+        pickers = {
+          git_files = {
+            theme = "dropdown"
+          }
+        },
         extensions = {
           fzf = {
             fuzzy = true,                   -- false will only do exact matching
@@ -59,9 +62,7 @@ return {
       }
       telescope.load_extension('fzf')
       telescope.load_extension('ui-select')
-      -- telescope.load_extension('refactoring')
-      -- telescope.load_extension('dap')
-      telescope.load_extension("zoxide")
+      telescope.load_extension('zoxide')
     end
   },
 }
