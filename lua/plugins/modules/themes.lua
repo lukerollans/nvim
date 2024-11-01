@@ -95,6 +95,7 @@ return {
             NormalFloat = { bg = colors.crust },
             FloatBorder = { bg = colors.crust, fg = colors.crust },
             VertSplit = { bg = colors.base, fg = colors.surface0 },
+            WinSeparator = { fg =  colors.base },
             CursorLineNr = { fg = colors.surface2 },
             Pmenu = { bg = colors.crust, fg = "" },
             PmenuSel = { bg = colors.surface0, fg = "" },
