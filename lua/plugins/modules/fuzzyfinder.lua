@@ -8,11 +8,9 @@ return {
     priority = 1000,
     dependencies = {
       'nvim-lua/plenary.nvim',
-      'jvgrootveld/telescope-zoxide',
       'nvim-tree/nvim-web-devicons',
       { 'nvim-telescope/telescope-fzf-native.nvim', build = 'make' },
       'nvim-telescope/telescope-ui-select.nvim',
-      --'telescope-dap.nvim'
     },
     config = function()
       local telescope = require('telescope')
@@ -62,7 +60,6 @@ return {
       }
       telescope.load_extension('fzf')
       telescope.load_extension('ui-select')
-      telescope.load_extension('zoxide')
     end
   },
 }
