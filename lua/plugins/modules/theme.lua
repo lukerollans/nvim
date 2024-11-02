@@ -93,6 +93,8 @@ return {
         custom_highlights = function(colors)
           return {
             WinSeparator = { fg =  colors.base },
+            TelescopeBorder = { fg = "#4D4433" },
+            TelescopePromptPrefix = { fg = colors.base }
             -- NormalFloat = { bg = colors.crust },
             -- FloatBorder = { bg = colors.crust, fg = colors.crust },
             -- VertSplit = { bg = colors.base, fg = colors.surface0 },
