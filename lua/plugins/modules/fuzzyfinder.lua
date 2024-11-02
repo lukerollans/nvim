@@ -31,7 +31,8 @@ return {
         },
         pickers = {
           git_files = {
-            theme = "dropdown"
+            theme = "dropdown",
+            previewer = false
           }
         },
         extensions = {
@@ -45,8 +46,8 @@ return {
             require("telescope.themes").get_dropdown({
               previewer        = false,
               initial_mode     = "normal",
-              sorting_strategy = 'ascending',
-              layout_strategy  = 'horizontal',
+              sorting_strategy = "ascending",
+              layout_strategy  = "horizontal",
               layout_config = {
                 horizontal = {
                   width = 0.5,
@@ -58,8 +59,8 @@ return {
           },
         }
       }
-      telescope.load_extension('fzf')
-      telescope.load_extension('ui-select')
+      telescope.load_extension("fzf")
+      telescope.load_extension("ui-select")
     end
   },
 }
