@@ -25,7 +25,7 @@ return {
             red = "#EA6962",
             maroon = "#EA6962",
             peach = "#BD6F3E",
-            yellow = "#D8A657",
+            yellow = "#F9E2AF",
             green = "#A9B665",
             teal = "#89B482",
             sky = "#89B482",
@@ -93,7 +93,7 @@ return {
         custom_highlights = function(colors)
           return {
             WinSeparator = { fg =  colors.base },
-            TelescopeBorder = { fg = "#4D4433" },
+            TelescopeBorder = { fg = colors.yellow },
             TelescopePromptPrefix = { fg = colors.base }
             -- NormalFloat = { bg = colors.crust },
             -- FloatBorder = { bg = colors.crust, fg = colors.crust },

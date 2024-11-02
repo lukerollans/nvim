@@ -2,7 +2,7 @@ return {
   "folke/noice.nvim",
   event = "VeryLazy",
   opts = {
-    -- add any options here
+    command_palette = true
   },
   dependencies = {
     -- if you lazy-load any plugin below, make sure to add proper `module="..."` entries
