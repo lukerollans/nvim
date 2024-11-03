@@ -97,7 +97,9 @@ return {
             TelescopeBorder = { fg = colors.yellow },
             TelescopePromptPrefix = { fg = colors.base },
             -- noice customisations
-            NoiceCmdlinePopupBorder = { fg = colors.yellow }
+            NoiceCmdlinePopupBorder = { fg = colors.yellow },
+            -- statusline customisations
+            StatusLineNC = { bg = "#252829" }
             -- NormalFloat = { bg = colors.crust },
             -- FloatBorder = { bg = colors.crust, fg = colors.crust },
             -- VertSplit = { bg = colors.base, fg = colors.surface0 },
