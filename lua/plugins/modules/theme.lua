@@ -99,13 +99,13 @@ return {
             -- noice customisations
             NoiceCmdlinePopupBorder = { fg = colors.yellow },
             -- statusline customisations
-            StatusLineNC = { bg = "#252829" }
+            StatusLineNC = { bg = "#252829" },
             -- NormalFloat = { bg = colors.crust },
             -- FloatBorder = { bg = colors.crust, fg = colors.crust },
             -- VertSplit = { bg = colors.base, fg = colors.surface0 },
             -- CursorLineNr = { fg = colors.surface2 },
-            -- Pmenu = { bg = colors.crust, fg = "" },
-            -- PmenuSel = { bg = colors.surface0, fg = "" },
+            Pmenu = { bg = colors.crust, fg = "" },
+            PmenuSel = { bg = colors.surface0, fg = "" },
             -- IndentBlanklineChar = { fg = colors.surface0 },
             -- IndentBlanklineContextChar = { fg = colors.surface2 },
             -- GitSignsChange = { fg = colors.peach },
