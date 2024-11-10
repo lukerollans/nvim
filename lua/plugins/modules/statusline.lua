@@ -42,7 +42,7 @@ return {
             c = { bg = colors.bg, fg = colors.fg }
           },
         },
-        icons_enabled = true,
+        icons_enabled = false,
         section_separators = "",
         component_separators = "",
         disabled_filetypes = {
