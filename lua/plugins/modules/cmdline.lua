@@ -7,6 +7,13 @@ return {
       format = {
         cmdline = { icon = "$" }
       }
+    },
+    lsp = {
+      signature = {
+        auto_open = {
+          enabled = false,
+        }
+      }
     }
   },
   dependencies = {
