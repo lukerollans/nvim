@@ -7,6 +7,9 @@ return {
       { 'hrsh7th/cmp-nvim-lsp' },
       { 'L3MON4D3/LuaSnip' }
     },
+    opts = {
+
+    },
     config = function()
       local cmp = require("cmp")
 
@@ -23,6 +26,9 @@ return {
           ['<C-k>'] = cmp.mapping.complete(),
           ['<C-e>'] = cmp.mapping.abort(),
           ['<CR>'] = cmp.mapping.confirm({ select = true }),
+        }),
+        sources = cmp.config.sources({
+          { name = 'nvim_lsp' },
         })
       })
     end
