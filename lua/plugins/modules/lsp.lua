@@ -3,7 +3,8 @@ return {
   {
     'VonHeikemen/lsp-zero.nvim',
     branch = 'v2.x',
-    lazy = false, dependencies = {
+    lazy = false,
+    dependencies = {
       -- LSP Support
       { 'neovim/nvim-lspconfig' },
       {
@@ -13,11 +14,6 @@ return {
         end,
       },
       { 'williamboman/mason-lspconfig.nvim' },
-
-      -- Autocompletion
-      { 'hrsh7th/nvim-cmp' },
-      { 'hrsh7th/cmp-nvim-lsp' },
-      { 'L3MON4D3/LuaSnip' },
 
       { 'onsails/lspkind.nvim' }, -- pictograms in autocompletion menu
       { 'b0o/schemastore.nvim' } -- json and yaml schema stores
