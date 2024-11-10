@@ -3,11 +3,6 @@ return {
   event = "VeryLazy",
   opts = {
     command_palette = true,
-    cmdline = {
-      format = {
-        cmdline = { icon = "$" }
-      }
-    },
     lsp = {
       signature = {
         auto_open = {

@@ -108,7 +108,7 @@ return {
             PmenuSel = { bg = colors.surface0, fg = "" },
             -- IndentBlanklineChar = { fg = colors.surface0 },
             -- IndentBlanklineContextChar = { fg = colors.surface2 },
-            -- GitSignsChange = { fg = colors.peach },
+            GitSignsChange = { fg = colors.peach },
             -- NvimTreeIndentMarker = { link = "IndentBlanklineChar" },
             -- NvimTreeExecFile = { fg = colors.text },
           }
