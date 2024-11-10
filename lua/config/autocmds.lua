@@ -49,10 +49,10 @@ api.nvim_create_autocmd(
 )
 
 -- change the background color of floating windows and borders.
-api.nvim_create_autocmd('ColorScheme', {
-  callback = function()
-    vim.cmd('highlight NormalFloat guibg=none guifg=none')
-    vim.cmd('highlight FloatBorder guifg=' .. require('config.colours').colors.fg .. ' guibg=none')
-    vim.cmd('highlight NormalNC guibg=none guifg=none')
-  end,
-})
+-- api.nvim_create_autocmd('ColorScheme', {
+--   callback = function()
+--     vim.cmd('highlight NormalFloat guibg=none guifg=none')
+--     vim.cmd('highlight FloatBorder guifg=' .. require('config.colours').colors.fg .. ' guibg=none')
+--     vim.cmd('highlight NormalNC guibg=none guifg=none')
+--   end,
+-- })
