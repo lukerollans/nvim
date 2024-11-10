@@ -4,15 +4,13 @@
 
 return {
   {
-    'jose-elias-alvarez/null-ls.nvim',
+    'nvimtools/none-ls.nvim',
     priority = 1500,
-    config = function()
-      local null_ls = require("null-ls")
-      null_ls.setup({
-        sources = {
-          null_ls.builtins.formatting.prettierd, -- inject Prettier rules in to LSP formatting
-        }
-      })
+    opts = function(_, opts)
+      local nls = require("null-ls")
+      opts.sources = {
+        nls.builtins.formatting.biome,
+      }
     end
   },
 }
