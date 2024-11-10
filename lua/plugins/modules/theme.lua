@@ -100,7 +100,7 @@ return {
             NoiceCmdlinePopupBorder = { fg = colors.yellow },
             -- statusline customisations
             StatusLineNC = { bg = "#252829" },
-            -- NormalFloat = { bg = colors.crust },
+            NormalFloat = { bg = colors.base },
             -- FloatBorder = { bg = colors.crust, fg = colors.crust },
             -- VertSplit = { bg = colors.base, fg = colors.surface0 },
             -- CursorLineNr = { fg = colors.surface2 },
