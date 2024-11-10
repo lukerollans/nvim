@@ -71,15 +71,10 @@ return {
             }
           },
           {
-            "filetype",
-            icon_only = true,
-            separator = "",
-            padding = {
-              left = 0,
-              right = 0
-            }
+            "diagnostics",
+            sources = { "nvim_lsp" },
+            symbols = { error = " ", warn = " ", info = " " }
           },
-          { "diagnostics", sources = { "nvim_lsp" }, symbols = { error = " ", warn = " ", info = " " } },
         },
         lualine_x = { "encoding" },
         lualine_y = { "progress" }
