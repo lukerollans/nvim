@@ -1,11 +1,12 @@
 return {
   {
     "catppuccin/nvim",
-    enabled = false,
+    enabled = true,
     priority = 150,
     name = "catppuccin",
     config = function()
       require("catppuccin").setup({
+        no_bold = true,
         default_integrations = false,
         background = {
           light = "latte",
