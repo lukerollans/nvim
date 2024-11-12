@@ -89,8 +89,6 @@ return {
           types = {},
           operators = {},
         },
-        transparent_background = false,
-        show_end_of_buffer = false,
         custom_highlights = function(colors)
           return {
             WinSeparator = { fg =  colors.base },
@@ -117,7 +115,7 @@ return {
       })
 
       -- activate catppuccin as the default colorscheme
-      vim.api.nvim_command("colorscheme catppuccin")
+      vim.cmd.colorscheme "catppuccin"
     end,
   },
 }
