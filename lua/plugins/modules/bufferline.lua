@@ -3,6 +3,7 @@ local colours = require("config.colours").colours
 return {
   "akinsho/bufferline.nvim",
   version = "*",
+  enabled = false,
   dependencies = "nvim-tree/nvim-web-devicons",
   config = function()
     require("bufferline").setup({
@@ -77,7 +78,6 @@ return {
         },
         duplicate = {
           fg = colours.fg,
-          blah = "blah",
           bg = ""
         },
         duplicate_visible = {
