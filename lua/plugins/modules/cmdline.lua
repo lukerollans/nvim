@@ -9,7 +9,23 @@ return {
           enabled = false,
         }
       }
-    }
+    },
+    cmdline = {
+      format = {
+        cmdline = {
+          icon = ""
+        },
+        search_down = {
+          icon = "",
+        },
+        search_up = {
+          icon = ""
+        },
+        filter = {
+          icon = ""
+        }
+      },
+    },
   },
   dependencies = {
     -- if you lazy-load any plugin below, make sure to add proper `module="..."` entries
