@@ -6,6 +6,7 @@ return {
     name = "catppuccin",
     config = function()
       require("catppuccin").setup({
+        default_integrations = false,
         background = {
           light = "latte",
           dark = "mocha",
@@ -13,7 +14,6 @@ return {
         integrations = {
           treesitter = true,
           gitsigns = true,
-          neotree = true,
           cmp = true,
         },
         color_overrides = {
