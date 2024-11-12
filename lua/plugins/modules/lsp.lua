@@ -22,7 +22,7 @@ return {
       local lsp = require('lsp-zero').preset('recommended')
 
       lsp.ensure_installed({
-        'tsserver',
+        'ts_ls',
         'eslint',
         'jsonls',
         'yamlls',
@@ -50,7 +50,7 @@ return {
           timeout_ms = 10000,
         },
         servers = {
-          ['tsserver'] = { 'javascript', 'typescript', 'javascriptreact', 'typescriptreact' },
+          ['ts_ls'] = { 'javascript', 'typescript', 'javascriptreact', 'typescriptreact' },
           ['elixirls'] = { 'elixir', 'eex' },
           ['jsonls'] = { 'json' },
           ['prismals'] = { 'prisma' },
@@ -90,7 +90,7 @@ return {
       local lspconfig = require('lspconfig')
 
       -- configure TypeScript specific settings
-      lspconfig.tsserver.setup {}
+      lspconfig.ts_ls.setup {}
 
       -- configure Lua specific settings
       lspconfig.lua_ls.setup({
