@@ -15,6 +15,7 @@ return {
       },
       { 'williamboman/mason-lspconfig.nvim' },
 
+      { 'L3MON4D3/LuaSnip' }, -- snippet engine
       { 'onsails/lspkind.nvim' }, -- pictograms in autocompletion menu
       { 'b0o/schemastore.nvim' } -- json and yaml schema stores
     },
