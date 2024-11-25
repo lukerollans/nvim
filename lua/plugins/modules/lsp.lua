@@ -32,6 +32,7 @@ return {
         'elixirls',
         'prismals',
         'terraformls',
+        'astro'
         -- 'rust_analyzer',
         -- 'gopls',
         -- 'lua_ls',
@@ -55,6 +56,7 @@ return {
           ['elixirls'] = { 'elixir', 'eex' },
           ['jsonls'] = { 'json' },
           ['prismals'] = { 'prisma' },
+          ['astro'] = { 'astro' },
           -- ['lua_ls'] = { 'lua' },
           -- ['rust_analyzer'] = { 'rust' },
           -- ['gopls'] = { 'go' },
@@ -92,6 +94,9 @@ return {
 
       -- configure TypeScript specific settings
       lspconfig.ts_ls.setup {}
+
+      -- wire up Astro files
+      lspconfig.astro.setup {}
 
       -- configure Lua specific settings
       lspconfig.lua_ls.setup({
