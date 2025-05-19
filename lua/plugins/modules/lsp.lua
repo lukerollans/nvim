@@ -32,9 +32,9 @@ return {
         'elixirls',
         'prismals',
         'terraformls',
-        'astro'
+        -- 'astro',
         -- 'rust_analyzer',
-        -- 'gopls',
+        'gopls',
         -- 'lua_ls',
         -- 'intelephense',
       })
@@ -56,10 +56,10 @@ return {
           ['elixirls'] = { 'elixir', 'eex' },
           ['jsonls'] = { 'json' },
           ['prismals'] = { 'prisma' },
-          ['astro'] = { 'astro' },
+          -- ['astro'] = { 'astro' },
           -- ['lua_ls'] = { 'lua' },
           -- ['rust_analyzer'] = { 'rust' },
-          -- ['gopls'] = { 'go' },
+          ['gopls'] = { 'go' },
         }
       })
 
