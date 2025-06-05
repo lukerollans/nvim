@@ -92,7 +92,7 @@ return {
         lualine_y = {}
       },
       tabline = {},
-      extensions = { "neo-tree", "lazy" },
+      extensions = { "oil", "lazy" },
     }
   end,
 }

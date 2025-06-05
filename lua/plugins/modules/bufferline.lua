@@ -17,7 +17,7 @@ return {
         max_name_length = 25,
         offsets = {
           {
-            filetype = "neo-tree",
+            filetype = "oil",
             text = "  Project",
             highlight = "Directory",
             text_align = "left",
