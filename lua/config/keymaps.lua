@@ -15,6 +15,9 @@ map('n', 'gt', ':BufferLineCycleNext<CR>')
 map('n', 'gr', ':BufferLineCyclePrev<CR>')
 map('n', 'gb', ':BufferLinePick<CR>')
 
+-- convenience to open current directory as a buffer (oil)
+map('n', '-', '<CMD>Oil<CR>', { desc = 'Open current directory as a buffer' })
+
 -- telescope keymaps
 map('n', '<C-p>', require('telescope.builtin').git_files, { desc = 'Search [G]it [F]iles' })
 map('n', '<C-[>', require('telescope.builtin').live_grep, { desc = '[S]earch by [G]rep' })
