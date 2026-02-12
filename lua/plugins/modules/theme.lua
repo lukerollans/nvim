@@ -1,5 +1,21 @@
 return {
   {
+    'aikhe/fleur.nvim',
+    lazy = false,
+    priority = 1000,
+    opts = {
+      transparent = false,
+      plugins = {
+        telescope = true,
+        oil = true,
+        which_key = true,
+      }
+    },
+    config = function()
+      vim.cmd("colorscheme fleur")
+    end,
+  },
+  {
     "catppuccin/nvim",
     enabled = true,
     priority = 150,
@@ -91,7 +107,7 @@ return {
         },
         custom_highlights = function(colors)
           return {
-            WinSeparator = { fg =  colors.base },
+            WinSeparator = { fg = colors.base },
             -- telescope customisations
             TelescopeBorder = { fg = colors.yellow },
             TelescopePromptPrefix = { fg = colors.base },
@@ -115,7 +131,7 @@ return {
       })
 
       -- activate catppuccin as the default colorscheme
-      vim.cmd.colorscheme "catppuccin"
+      -- vim.cmd.colorscheme "catppuccin"
     end,
   },
 }
