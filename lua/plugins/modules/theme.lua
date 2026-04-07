@@ -1,21 +1,5 @@
 return {
   {
-    'aikhe/fleur.nvim',
-    lazy = false,
-    priority = 1000,
-    opts = {
-      transparent = false,
-      plugins = {
-        telescope = true,
-        oil = true,
-        which_key = true,
-      }
-    },
-    config = function()
-      vim.cmd("colorscheme fleur")
-    end,
-  },
-  {
     "catppuccin/nvim",
     enabled = true,
     priority = 150,
@@ -131,7 +115,7 @@ return {
       })
 
       -- activate catppuccin as the default colorscheme
-      -- vim.cmd.colorscheme "catppuccin"
+      vim.cmd.colorscheme "catppuccin"
     end,
   },
 }
